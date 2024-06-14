@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 8081;
 const DB_URI = process.env.DATABASE_URL;
 
 app.use(express.json());
-app.use("/users", userRoutes)
+app.use("/users", userRoutes);
+app.use("/notes", noteRoutes)
 
 mongoose
   .connect(DB_URI)
