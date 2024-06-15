@@ -11,14 +11,15 @@ class NoteServices {
     }
     add = async(note) => {
         try{
-            const note = new NoteModel({...note});
-            const result = await note.save();
+            const notes = new NoteModel({...note});
+            const result = await notes.save();
             return result;
         }catch(error){
             throw error
         }
     }
     edit = async(note, id) => {
+        console.log(note, id)
         try{
             const result = await NoteModel.findOneAndUpdate({_id: id}, {...note}, {new: true});
             return result;

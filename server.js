@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
+const noteRoutes = require("./routes/noteRoutes")
 const app = express();
 const PORT = process.env.PORT || 8081;
 const DB_URI = process.env.DATABASE_URL;

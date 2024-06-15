@@ -10,3 +10,6 @@ router.get("/read", getAllNotes)
 router.post("/new",validateNotes, postNotes )
 router.put("/edit/:id", updateNotes)
 router.delete("/remove/:id", deleteNotes)
+
+
+module.exports = router;
